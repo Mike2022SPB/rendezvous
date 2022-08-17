@@ -14,8 +14,21 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
-      </div>
 
+        <div class="navbar">
+          <ul class="nav navbar-nav">
+            <% if user_signed_in? %>
+              <li><%= link_to 'Profile', current_user %></li>
+              <li><%= link_to 'Log out', destroy_user_session_path,
+                  method: :delete %></li>
+              <% else %>
+              <li><%= link_to 'Sign_in', new_user_session_path %></li>
+              <li><%= link_to 'Sign_up',
+                  new_user_registration_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -23,8 +36,6 @@
     <div class="row">
       <div class="col-lg-9">
         <%= yield %>
-      </div>
-      <div class="col-lg-3">
       </div>
     </div>
 
