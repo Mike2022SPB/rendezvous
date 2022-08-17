@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root "articles#index"
+  resources :users
+  root to: "events#index"
 
-  get "/articles", to: "articles#index"
+  resources :events
+
+  resources :users, only: [:show, :edit, :update]
 end
