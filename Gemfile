@@ -13,6 +13,7 @@ gem "cssbundling-rails"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "devise"
+gem 'devise-i18n'
 
 group :production do
   gem "pg"
