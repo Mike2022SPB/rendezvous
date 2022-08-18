@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[show]
 
-  # Задаем объект @user для шаблонов и экшенов
   before_action :set_current_user, except: %i[show]
 
   def show
