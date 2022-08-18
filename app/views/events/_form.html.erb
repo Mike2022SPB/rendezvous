@@ -1,28 +1,31 @@
 <%= form_for(@event) do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: @event} %>
 
-  <div class="form-group">
+<form>
+  <div class="fform-group buffer-both">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group buffer-both">
     <%= f.label :address %>
     <%= f.text_field :address, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group buffer-both">
     <%= f.label :datetime %>
     <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
   </div>
 
-  <div class="form-group">
+  <div class="form-group buffer-both">
     <%= f.label :description %>
     <%= f.text_area :description, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit 'Save', class: 'btn btn-primary' %>
+    <%= f.submit 'Save', class: 'btn btn-success buffer-both' %>
     or <%= link_to 'back', :back %>
   </div>
+</form>
+
 <% end %>
