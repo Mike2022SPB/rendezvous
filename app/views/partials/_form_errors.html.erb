@@ -1,15 +1,20 @@
 <% errors = model.errors %>
 
 <% if errors.any? %>
-  <div class="alert alert-danger">
-    <div class="lead buffer-bottom">
-      <%= errors.count %> errors in your form.
-    </div>
 
-    <ul>
-      <% errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+  <div class="alert alert-warning alert-dismissible fade show buffer-top" role="alert">
+
+    <h4>
+      <div class="lead buffer-bottom">
+        <%= errors.count %> errors in your form.
+      </div>
+    </h4>
+      <ul>
+        <% errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
+
 <% end %>
