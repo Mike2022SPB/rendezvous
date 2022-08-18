@@ -20,7 +20,7 @@ fr:
     company: "Société 2022"
     forgot: "Mot de passe oublié?"
   errors_in_form:
-    one: " erreur dans votre formulaire"
+    one: "1 erreur dans votre formulaire"
     few: " erreurs dans votre formulaire"
   events:
     index:

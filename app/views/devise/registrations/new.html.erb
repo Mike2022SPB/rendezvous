@@ -1,7 +1,7 @@
 <%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="buffer-both">
-  <h2>Sign up</h2>
+  <h2> <%= t('app.up') %> </h2>
 </div>
 
 
@@ -27,7 +27,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-success" %>
+      <%= f.submit t('app.up'), class: "btn btn-success" %>
     </div>
   </form>
 

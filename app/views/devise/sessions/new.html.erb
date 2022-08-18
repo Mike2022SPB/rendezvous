@@ -1,5 +1,5 @@
 <div class="buffer-both">
-  <h2>Log in</h2>
+  <h2> <%= t('app.in') %> </h2>
 </div>
 
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -26,7 +26,7 @@
     <% end %>
 
     <div class="actions">
-      <%= f.submit "Log in", class: "btn btn-success" %>
+      <%= f.submit t('app.in'), class: "btn btn-success" %>
     </div>
   </form>
 

@@ -2,10 +2,11 @@
 <% if resource.errors.any? %>
   <div class="alert alert-warning alert-dismissible fade show buffer-top" role="alert">
       <h4>
-        <%= I18n.t("errors.messages.not_saved",
-                   count: resource.errors.count,
-                   resource: resource.class.model_name.human.downcase)
-         %>
+        <% if resource.errors.count == 1 %>
+          <%= t("errors_in_form.one") %>
+         <% else %>
+           <%= resource.errors.count %><%= t("errors_in_form.few") %>
+        <% end %>
       </h4>
       <ul>
         <% resource.errors.full_messages.each do |message| %>
