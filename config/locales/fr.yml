@@ -1,0 +1,62 @@
+fr:
+  users:
+    show:
+      name: "name"
+      edit: "éditer"
+      zero_events: "L'utilisateur n'a pas encore organisé d'événements"
+      organised_by: "Organisé:"
+      editing: "Édition"
+      save: "Sauvegardez"
+      back: "arrière"
+      change_pass: "Changer le mot de passe"
+    controller:
+      updated: "L'utilisateur a été mis à jour avec succès"
+  app:
+    name: "Meet app"
+    prof: "Votre profil"
+    out: "Déconnecter"
+    in: "Connecter"
+    up: "Inscrire"
+    company: "Société 2022"
+    forgot: "Mot de passe oublié?"
+  errors_in_form:
+    one: " erreur dans votre formulaire"
+    few: " erreurs dans votre formulaire"
+  events:
+    index:
+      events: "Événement"
+      create: "Créer une réunion"
+    new:
+      save: "Sauvegardez"
+      or: "ou"
+      back: "arrière"
+      title: "intitulé"
+      address: "adresse"
+      datetime: "date et heure"
+      description: "description"
+    controller:
+      created: "L''événement a été créé avec succès"
+      updated: "L'événement a été mis à jour avec succès"
+      destroyed: "L'événement a été détruit avec succès"
+    show:
+      change: "Édition"
+    delete:
+      sure: "Êtes-vous sûre?"
+      destroy: "Détruire"
+    call: "Appelle:"
+    they_will_go: "Vont:"
+    i_will_go: "Je vais y aller:"
+  controllers:
+    destroyed: "Commentaire supprimé"
+    created: "Votre commentaire Ajouté"
+    error: "Erreur de commentaire"
+    subscriptions:
+      created: "Vous êtes abonné à cet événement"
+      destroyed: "Membre désabonné"
+      error: "l'Abonnement / désabonnement n'a pas fonctionné"
+  comments:
+    comment:
+    destroy_confirm: "Êtes-vous sûr de vouloir supprimer ce commentaire?"
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Êtes-vous sûr de vouloir supprimer cet abonnement?'

@@ -29,7 +29,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      redirect_to @event, notice: "Event was successfully updated."
+      redirect_to @event, notice: t('controllers.events.updated')
     else
       render :edit, status: :unprocessable_entity
     end
