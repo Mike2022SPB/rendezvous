@@ -37,6 +37,16 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-9">
+
+        <%- flash.each do |name, msg| -%>
+          <div class="alert alert-warning alert-dismissible fade show buffer-top" role="alert">
+            <h5>
+              <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <%- end -%>
+
         <%= yield %>
       </div>
     </div>

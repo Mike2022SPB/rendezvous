@@ -1,8 +1,9 @@
+<%= render "devise/shared/error_messages", resource: resource %>
+
 <div class="buffer-both">
   <h2>Sign up</h2>
 </div>
 
-  <%= render "devise/shared/error_messages", resource: resource %>
 
 <%= form_for(resource, as: resource_name, data: { turbo: false }, url: registration_path(resource_name)) do |f| %>
 
