@@ -9,6 +9,8 @@ fr:
       save: "Sauvegardez"
       back: "arrière"
       change_pass: "Changer le mot de passe"
+      name: "Nom"
+      destroy: "Détruire"
     controller:
       updated: "L'utilisateur a été mis à jour avec succès"
   app:

@@ -5,25 +5,12 @@
 <div class="row">
   <div class="col-md-12">
     <% if @user.events.any? %>
-      <h3>Organized by user:</h3>
+      <h3><%= t('users.show.organised_by') %></h3>
       <div class="row">
         <%= render partial: 'events/event', collection: @user.events %>
       </div>
     <% else %>
-      <p class="buffer-top">The user has not organized any events yet</p>
+      <p class="buffer-top"><%= t('users.show.zero_events') %></p>
     <% end %>
-  </div>
-</div>
-
-<div>
-
-  <% if @user == current_user %>
-    <%= link_to "Edit this user", edit_user_path(@user), class: 'btn btn-success buffer-top' %>
-
-    <%= button_to "Destroy this user", @user, method: :delete, class: 'btn btn-danger buffer-both'%>
-  <% end %>
-
-  <div class="buffer-both">
-    <%= link_to "Back to users", user_path %>
   </div>
 </div>

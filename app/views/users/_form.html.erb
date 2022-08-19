@@ -2,7 +2,7 @@
 
   <form>
     <div class="form-group buffer-both">
-      <%= f.label :name %>
+      <%= f.label t("users.show.name") %>
       <%= f.text_field :name, class: 'form-control' %>
     </div>
 
@@ -12,8 +12,8 @@
     </div>
 
     <div class="actions">
-      <%= f.submit 'Save', class: "btn btn-success" %>
-      or <%= link_to 'back', :back %>
+      <%= f.submit t('users.show.save'), class: "btn btn-success" %>
+      or <%= link_to t('users.show.back'), :back %>
     </div>
   </form>
 

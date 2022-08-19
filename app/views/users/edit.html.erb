@@ -1,13 +1,13 @@
 <%= render partial: 'partials/form_errors', locals: {model: @user} %>
 
-<h1>Editing user</h1>
+<h1><%= t('users.show.editing') %></h1>
 
 <div class="row">
   <div class="col-md-6 buffer-top">
     <%= render 'form' %>
 
     <p class="buffer-top">
-      <%= link_to 'Change password', edit_user_registration_path %>
+      <%= link_to t('users.show.change_pass'), edit_user_registration_path %>
     </p>
   </div>
 </div>

@@ -1,9 +1,19 @@
 <div class="text-center">
+
   <%= image_tag user_avatar(@user) %>
+
   <h1><%= @user.name %></h1>
 
-  <p class="buffer-top">
-  <%= link_to "Edit Profile", edit_user_path(@user),
-    class: 'btn btn-default' %>
+  <% if @user == current_user %>
+
+    <p class="buffer-top">
+
+    <%= link_to t("users.show.editing"), edit_user_path(@user),
+    class: 'btn btn-success' %>
+    <%= button_to t("users.show.destroy"), @user, method: :delete, class: 'btn btn-danger'%>
+
+  <% end %>
+
   </p>
+
 </div>

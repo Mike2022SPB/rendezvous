@@ -9,6 +9,8 @@ en:
       save: "Save"
       back: "back"
       change_pass: "Change password"
+      name: "Name"
+      destroy: "Destroy"
     controller:
       updated: "User was successfully updated"
   app:
