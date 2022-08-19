@@ -11,6 +11,17 @@ fr:
       change_pass: "Changer le mot de passe"
       name: "Nom"
       destroy: "Détruire"
+      update: "Mettre"
+      change_pass: "Changer votre mot de passe?"
+      forgot_pass: "Mot de passe oublié?"
+      send_pass: "Envoyez-moi les instructions de réinitialisation du mot de passe"
+      change_my_pass: "Modifier mon mot de passe"
+      confirm_pass: "Confirmer mon mot de passe"
+      new_pass: "Nouveau mot de passe"
+      cancel_acc: "Annuler mon compte"
+      unhappy: "Malheureux?"
+      leave_blank: "laissez vide si vous ne voulez pas le changer"
+      char_min: "caractères minimum"
     controller:
       updated: "L'utilisateur a été mis à jour avec succès"
   app:
