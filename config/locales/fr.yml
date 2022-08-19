@@ -54,6 +54,7 @@ fr:
     error: "Erreur de commentaire"
     events:
       updated: "Événement mis à jour avec succès"
+      are_you_really_sure: "Êtes-vous sûre?"
     subscriptions:
       created: "Vous êtes abonné à cet événement"
       destroyed: "Membre désabonné"

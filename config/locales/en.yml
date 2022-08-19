@@ -53,7 +53,8 @@ en:
     created: 'Your comment has been added'
     error: 'Error with comment'
     events:
-      updated: "Événement mis à jour avec succès"
+      updated: "Event was successfully updated"
+      are_you_really_sure: "Are you sure?"
     subscriptions:
       created: 'You are subscribed to this event'
       destroyed: 'Member unsubscribed'
