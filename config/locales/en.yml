@@ -60,3 +60,10 @@ en:
   subscriptions:
     subscription:
       destroy_confirm: 'Are you sure you want to delete this subscription?'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "Password can't be blank"

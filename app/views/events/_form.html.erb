@@ -13,7 +13,7 @@
   </div>
 
   <div class="form-group buffer-both">
-    <%= f.label :datetime %>
+    <%= f.label :datetime, order: [:day, :month, :year] %>
     <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
   </div>
 

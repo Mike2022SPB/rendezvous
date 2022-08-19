@@ -60,3 +60,13 @@ fr:
   subscriptions:
     subscription:
       destroy_confirm: 'Êtes-vous sûr de vouloir supprimer cet abonnement?'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "L'e-mail ne peut pas être vide"
+              invalid: "E-mail non valide"
+            password:
+              blank: "Le mot de passe ne peut pas être vide"
