@@ -52,7 +52,8 @@ en:
     destroyed: 'Comment deleted'
     created: 'Your comment has been added'
     error: 'Error with comment'
-    updated: "Event successfully updated"
+    events:
+      updated: "Événement mis à jour avec succès"
     subscriptions:
       created: 'You are subscribed to this event'
       destroyed: 'Member unsubscribed'

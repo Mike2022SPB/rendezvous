@@ -52,7 +52,8 @@ fr:
     destroyed: "Commentaire supprimé"
     created: "Votre commentaire Ajouté"
     error: "Erreur de commentaire"
-    updated: "Événement mis à jour avec succès"
+    events:
+      updated: "Événement mis à jour avec succès"
     subscriptions:
       created: "Vous êtes abonné à cet événement"
       destroyed: "Membre désabonné"
