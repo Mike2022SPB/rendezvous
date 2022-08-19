@@ -3,28 +3,28 @@
 
 <form>
   <div class="fform-group buffer-both">
-    <%= f.label :title %>
+    <%= f.label t('events.new.title') %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="form-group buffer-both">
-    <%= f.label :address %>
+    <%= f.label t('events.new.address') %>
     <%= f.text_field :address, class: 'form-control' %>
   </div>
 
   <div class="form-group buffer-both">
-    <%= f.label :datetime, order: [:day, :month, :year] %>
+    <%= f.label t('events.new.datetime') %>
     <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
   </div>
 
   <div class="form-group buffer-both">
-    <%= f.label :description %>
+    <%= f.label t('events.new.description') %>
     <%= f.text_area :description, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit 'Save', class: 'btn btn-success buffer-both' %>
-    or <%= link_to 'back', :back %>
+    <%= f.submit t('events.new.save'), class: 'btn btn-success buffer-both' %>
+    <%= t('events.new.or') %> <%= link_to t('events.new.back'), :back %>
   </div>
 </form>
 

@@ -12,7 +12,7 @@ fr:
     controller:
       updated: "L'utilisateur a été mis à jour avec succès"
   app:
-    name: "Meet app"
+    name: "Rendezvous"
     prof: "Votre profil"
     out: "Déconnecter"
     in: "Connecter"
