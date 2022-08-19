@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :events
 
+  has_many :comments, dependent: :destroy
+
   before_validation :set_name, on: :create
 
   validates :name, presence: true, length: {maximum: 35}
