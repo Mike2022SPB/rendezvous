@@ -11,8 +11,8 @@
     <em><%= l comment.created_at, format: :short %></em>
     <% if current_user_can_edit?(comment) %>
       <%= link_to(
-            "Destroy", event_comment_path(comment.event, comment),
-            method: :delete, data: {confirm: t('Are you sure?')}
+            t("users.show.destroy"), event_comment_path(comment.event, comment),
+            method: :delete, data: {confirm: t('comments.comment.destroy_confirm')}
         ) %>
     <% end %>
   </p>
