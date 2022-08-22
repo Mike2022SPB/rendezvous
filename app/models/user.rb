@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+  has_many :subscriptions
+
   before_validation :set_name, on: :create
 
   validates :name, presence: true, length: {maximum: 35}

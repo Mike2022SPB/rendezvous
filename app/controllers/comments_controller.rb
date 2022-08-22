@@ -4,13 +4,12 @@ class CommentsController < ApplicationController
 
   def create
     @new_comment = @event.comments.build(comment_params)
-
     @new_comment.user = current_user
 
-    if @comment.save
+    if @new_comment.save
       redirect_to @event, notice: t('controllers.created')
     else
-      render "events/show", notice: t('controllers.error')
+      render 'events/show', alert: t('controllers.error')
     end
   end
 
@@ -23,19 +22,20 @@ class CommentsController < ApplicationController
       message = {alert: t('controllers.error')}
     end
 
-    redirect_to @event, message
+    redirect_to @event
   end
 
   private
-    def set_event
-      @event = Event.find(params[:event_id])
-    end
 
-    def set_comment
-      @comment = @event.comments.find(params[:id])
-    end
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
 
-    def comment_params
-      params.require(:comment).permit(:body, :user_name)
-    end
+  def set_comment
+    @comment = @event.comments.find(params[:id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:body, :user_name)
+  end
 end
