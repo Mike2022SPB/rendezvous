@@ -4,22 +4,22 @@
 <form>
   <div class="fform-group buffer-both">
     <%= f.label t('events.new.title') %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.text_field :title, class: 'form-control', class: "form-control" %>
   </div>
 
   <div class="form-group buffer-both">
     <%= f.label t('events.new.address') %>
-    <%= f.text_field :address, class: 'form-control' %>
+    <%= f.text_field :address, class: 'form-control', class: "form-control" %>
   </div>
 
   <div class="form-group buffer-both">
     <%= f.label t('events.new.datetime') %>
-    <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
+    <p><%= f.datetime_select :datetime, class: 'form-control', class: "form-control" %></p>
   </div>
 
   <div class="form-group buffer-both">
     <%= f.label t('events.new.description') %>
-    <%= f.text_area :description, class: 'form-control' %>
+    <%= f.text_area :description, class: 'form-control', class: "form-control" %>
   </div>
 
   <div class="actions">
