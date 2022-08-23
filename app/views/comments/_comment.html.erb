@@ -8,7 +8,7 @@
       <% end %>
 
       <% if current_user_can_edit?(comment) %>
-        <%= button_to t("users.show.destroy"), @comments, method: :delete, form: { data: { 'turbo-confirm': t('controllers.events.are_you_really_sure') } }, class: 'btn btn-danger buffer-bottom' %>
+        <%= button_to t("users.show.destroy"),  event_comment_path(comment.event, comment), method: :delete, form: { data: { 'turbo-confirm': t('controllers.events.are_you_really_sure') } }, class: 'btn btn-danger buffer-bottom' %>
       <% end %>
     </span>
   </p>
