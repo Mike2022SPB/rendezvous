@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
       message = {alert: t('controllers.error')}
     end
 
-    redirect_to @event
+    redirect_to @event, status: :see_other
   end
 
   private
