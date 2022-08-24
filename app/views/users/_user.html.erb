@@ -7,12 +7,14 @@
   <% if user == current_user %>
 
     <p class="buffer-top">
-
-    <%= button_to t("users.show.editing"), edit_user_path(@user),
+      <%= link_to t("users.show.editing"), edit_user_path(@user),
     class: 'btn btn-success' %>
-    <%= button_to t("users.show.destroy"), @user, method: :delete, class: 'btn btn-danger buffer-top'%>
-
     </p>
+
+    <p>
+      <%= button_to t("users.show.destroy"), @user, method: :delete, form: { data: { 'turbo-confirm': t('controllers.events.are_you_really_sure') } },  class: 'btn btn-danger buffer-top'%>
+    </p>
+
   <% else %>
   <% end %>
 
