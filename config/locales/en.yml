@@ -96,6 +96,7 @@ en:
           attributes:
             user_email:
               prohibited_of_self_signing: "Self signing is prohibited"
+              prohibited_email: "Email is busy"
   subscribers:
     invites: "Invites:"
     they_will_go: "They will go:"

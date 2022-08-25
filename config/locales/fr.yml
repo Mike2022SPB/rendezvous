@@ -96,6 +96,7 @@ fr:
           attributes:
             user_email:
               prohibited_of_self_signing: ":L'auto-signature est interdite"
+              prohibited_email: "L'email est occupé"
   subscribers:
     invites: "Invite:"
     they_will_go: "Ils iront:"

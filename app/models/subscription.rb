@@ -9,6 +9,8 @@ class Subscription < ApplicationRecord
 
   validate :prohibition_of_self_signing
 
+  validate :prohibition_of_using_a_busy_email
+
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
 
@@ -32,5 +34,9 @@ class Subscription < ApplicationRecord
 
   def prohibition_of_self_signing
     errors.add(:user_email, :prohibited_of_self_signing) if event.user == user
+  end
+
+  def prohibition_of_using_a_busy_email
+    errors.add(:user_email, :prohibited_email) if User.exists?(email: user_email)
   end
 end
