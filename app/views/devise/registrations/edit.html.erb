@@ -20,7 +20,6 @@
       <%= f.label t("password.password") %> <i>(<%= t("users.show.leave_blank") %>)</i><br />
       <%= f.password_field :password, autocomplete: t("users.show.new_pass"), class: "form-control" %>
       <% if @minimum_password_length %>
-        <br />
         <em><%= @minimum_password_length %> <%= t("users.show.char_min") %></em>
       <% end %>
     </div>
