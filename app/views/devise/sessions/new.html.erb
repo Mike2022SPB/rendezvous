@@ -13,14 +13,14 @@
     </div>
 
     <div class="form-group buffer-both">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+      <%= f.label t("users.show.current_password") %><br />
+      <%= f.password_field :password, autocomplete: t("users.show.current_password"), class: "form-control" %>
     </div>
 
     <% if devise_mapping.rememberable? %>
       <div class="form-group buffer-both">
         <%= f.check_box :remember_me, class: "form-check-input" %>
-        <%= f.label :remember_me %>
+        <%= f.label t('app.remember_me') %>
       </div>
     <% end %>
 

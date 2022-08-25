@@ -1,14 +1,14 @@
 <%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="buffer-both">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <h2><%= t("users.show.editing") %></h2>
 </div>
 
 <%= form_for(resource, as: resource_name, data: { turbo: false }, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
   <form>
     <div class="form-group buffer-both">
-      <%= f.label :email, class: "form-control" %><br />
+      <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
     </div>
 
@@ -17,8 +17,8 @@
     <% end %>
 
     <div class="form-group buffer-both">
-      <%= f.label :password %> <i>(<%= t("users.show.leave_blank") %>)</i><br />
-      <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+      <%= f.label t("password.password") %> <i>(<%= t("users.show.leave_blank") %>)</i><br />
+      <%= f.password_field :password, autocomplete: t("users.show.new_pass"), class: "form-control" %>
       <% if @minimum_password_length %>
         <br />
         <em><%= @minimum_password_length %> <%= t("users.show.char_min") %></em>
@@ -26,13 +26,13 @@
     </div>
 
     <div class="form-group buffer-both">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+      <%= f.label t("users.show.new_pass") %><br />
+      <%= f.password_field :password_confirmation, autocomplete: t("users.show.new_pass"), class: "form-control" %>
     </div>
 
     <div class="form-group buffer-both">
-      <%= f.label :current_password %> <br />
-      <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+      <%= f.label t("users.show.current_password") %> <br />
+      <%= f.password_field :current_password, autocomplete: t("users.show.current_password") , class: "form-control" %>
     </div>
 
     <div class="actions">

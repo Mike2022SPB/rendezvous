@@ -22,6 +22,7 @@ en:
       unhappy: "Unhappy?"
       leave_blank: "leave blank if you don't want to change it"
       char_min: "characters minimum"
+      current_password: "current password"
     controller:
       updated: "User was successfully updated"
   app:
@@ -32,6 +33,10 @@ en:
     up: "Sign up"
     company: "Company 2022"
     forgot: "Forgot your password?"
+    remember_me: "remember be"
+    did_not_receive: "Didn't receive confirmation instructions?"
+    did_not_receive_unlock: "Didn't receive unlock instructions?"
+    sign_in: "Sign in with"
   errors_in_form:
     one: " error in your form"
     few: " errors in your form"
@@ -92,3 +97,10 @@ en:
     they_will_go: "They will go:"
     i_will_go: "I will go:"
     subscribe: "Subscribe"
+  password:
+    hello: "Hello"
+    someone: "Someone has requested a link to change your password. You can do this through the link below."
+    if_you: "If you didn't request this, please ignore this email."
+    your_password_wont: "Your password won't change until you access the link above and create a new one."
+    password: "password"
+    min: "characters minimum"

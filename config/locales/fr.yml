@@ -22,6 +22,7 @@ fr:
       unhappy: "Malheureux?"
       leave_blank: "laissez vide si vous ne voulez pas le changer"
       char_min: "caractères minimum"
+      current_password: "mot de passe actuel"
     controller:
       updated: "L'utilisateur a été mis à jour avec succès"
   app:
@@ -32,6 +33,10 @@ fr:
     up: "Inscrire"
     company: "Société 2022"
     forgot: "Mot de passe oublié?"
+    remember_me: "souviens-toi"
+    did_not_receive: "Vous n'avez pas reçu d'instructions de confirmation?"
+    did_not_receive_unlock: "Vous n'avez pas reçu les instructions de déverrouillage?"
+    sign_in: "Connectez-vous avec"
   errors_in_form:
     one: "1 erreur dans votre formulaire"
     few: " erreurs dans votre formulaire"
@@ -92,3 +97,10 @@ fr:
     they_will_go: "Ils iront:"
     i_will_go: "Je vais y aller:"
     subscribe: "Abonner"
+  password:
+    hello: "Bonjour"
+    someone: "Quelqu'un a demandé un lien pour changer votre mot de passe. Vous pouvez le faire via le lien ci-dessous."
+    if_you: "Si vous ne l'avez pas demandé, veuillez ignorer cet e-mail."
+    your_password_wont: "Votre mot de passe ne changera pas tant que vous n'aurez pas accédé au lien ci-dessus et que vous n'en aurez pas créé un nouveau."
+    password: "mot de passe"
+    min: "caractères minimum"
