@@ -92,6 +92,10 @@ en:
               invalid: "Invalid e-mail"
             password:
               blank: "Password can't be blank"
+      subscription:
+        attributes:
+          user_email:
+            prohibited_of_self_signing: "Self signing is prohibited"
   subscribers:
     invites: "Invites:"
     they_will_go: "They will go:"
