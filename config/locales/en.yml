@@ -1,4 +1,5 @@
 en:
+  language: "Version française"
   users:
     show:
       name: "name"

@@ -30,11 +30,10 @@
             <% end %>
           <% I18n.available_locales.each do |locale| %>
             <li>
-              <% if I18n.locale == locale %>
-                <%= link_to "English", root_path(locale: locale), class: 'buffer-small btn btn-primary' %>
+              <% if I18n.locale != locale %>
+                <%= link_to t("language"), root_path(locale: locale), class: 'buffer-small btn btn-primary' %>
               <% else %>
-                <%= link_to "Français", root_path(locale: locale), class: 'buffer-small btn btn-primary' %>
-               <% end %>
+             <% end %>
             </li>
           <% end %>
           </li>
