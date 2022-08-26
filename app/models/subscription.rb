@@ -2,17 +2,17 @@ class Subscription < ApplicationRecord
   belongs_to :event
   belongs_to :user, optional: true
 
-  validates :event, presence: true
+  with_options if: -> { user.present? } do
+    validate :prohibition_of_self_signing
+    validates :user, uniqueness: {scope: :event_id}
+  end
 
-  validates :user_name, presence: true, unless: -> { user.present? }
-  validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
-
-  validate :prohibition_of_self_signing, if: -> { user.present? }
-
-  validate :prohibition_of_using_a_busy_email, unless: -> { user.present? }
-
-  validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
-  validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
+  with_options unless: -> { user.present? } do
+    validates :user_name, presence: true
+    validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
+    validate :prohibition_of_using_a_busy_email
+    validates :user_email, uniqueness: {scope: :event_id}
+  end
 
   def user_name
     if user.present?
