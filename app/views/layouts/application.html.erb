@@ -28,6 +28,15 @@
               <li><%= link_to t('app.in'), new_user_session_path, class: 'buffer-small btn btn-primary' %></li>
               <li><%= link_to t('app.up'), new_user_registration_path, class: 'buffer-small btn btn-primary' %></li>
             <% end %>
+          <% I18n.available_locales.each do |locale| %>
+            <li>
+              <% if I18n.locale == locale %>
+                <%= link_to "English", root_path(locale: locale), class: 'buffer-small btn btn-primary' %>
+              <% else %>
+                <%= link_to "Français", root_path(locale: locale), class: 'buffer-small btn btn-primary' %>
+               <% end %>
+            </li>
+          <% end %>
           </li>
         </ul>
       </div>
