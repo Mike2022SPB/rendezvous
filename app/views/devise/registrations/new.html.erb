@@ -14,10 +14,11 @@
     </div>
 
     <div class="form-group buffer-both">
-      <% if @minimum_password_length %>
-      <%= f.label :password %> (<%= "#{@minimum_password_length} #{t("password.min")}"%> )
-      <% end %>
+      <%= f.label :password %>
       <%= f.password_field :password, class: "form-control" %>
+      <% if @minimum_password_length %>
+        (<%= "#{@minimum_password_length} #{t("password.min")}"%> )
+      <% end %>
     </div>
 
     <div class="form-group buffer-both">
