@@ -10,4 +10,8 @@ class Event < ApplicationRecord
   has_many :subscriptions, dependent: :destroy
   has_many :subscribers, through: :subscriptions, source: :user
   has_many :photos
+
+  def visitors
+    (subscribers + [user]).uniq
+  end
 end
