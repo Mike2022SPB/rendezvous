@@ -1,13 +1,13 @@
 <div class="text-center">
 
-  <%= image_tag(user_avatar(@user)) %>
+  <%= image_tag(user_avatar(user)) %>
 
   <h1><%= user.name %></h1>
 
   <% if user == current_user %>
 
     <p class="buffer-top">
-      <%= link_to t("users.show.editing"), edit_user_path(@user),
+      <%= link_to t("users.show.editing"), edit_user_path(user),
     class: 'btn btn-success' %>
     </p>
 

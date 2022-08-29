@@ -76,6 +76,12 @@ fr:
       created: "Vous êtes abonné à cet événement"
       destroyed: "Membre désabonné"
       error: "l'Abonnement / désabonnement n'a pas fonctionné"
+    photos:
+      error: "Quelque chose ne va pas avec la photo"
+      created: "Vous avez ajouté une photo à l'événement"
+      destroyed: "Vous avez supprimé la photo"
+      download: "Télécharger"
+      added: "Ajouter"
   comments:
     comment:
     destroy_confirm: "Êtes-vous sûr de vouloir supprimer ce commentaire?"
