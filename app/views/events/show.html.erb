@@ -46,7 +46,6 @@
     </div>
 
     <div class="event-subscription-form">
-      <h4> <%= t("subscribers.i_will_go") %> </h4>
       <div>
         <%= render partial: 'subscriptions/form', locals: {
           subscription: @new_subscription || @event.subscriptions.build
