@@ -20,6 +20,8 @@ gem "carrierwave"
 gem "rmagick"
 gem "image_processing"
 gem "aws-sdk-s3"
+gem "mailjet"
+gem "dotenv-rails"
 
 group :production do
   gem "pg"
