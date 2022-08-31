@@ -18,7 +18,8 @@ gem "devise-i18n"
 gem "font-awesome-rails"
 gem "carrierwave"
 gem "rmagick"
-gem "fog-aws"
+gem "image_processing"
+gem "aws-sdk-s3"
 
 group :production do
   gem "pg"
