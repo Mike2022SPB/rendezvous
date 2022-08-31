@@ -2,7 +2,7 @@
   <div class="event-info row">
     <div class="col-md-12">
       <%= content_tag 'div', '', class: 'event-background',
-        style: "background-image: url(#{event_photo(@event)})"
+        style: "background-image: url(#{asset_path('event.png')})"
       %>
 
       <div class="event-info-inner row">
@@ -46,41 +46,14 @@
       </div>
     </div>
 
-  <%= form_with model: [@event, @new_subscription], data: { turbo: false } do |f| %>
-
-      <% if current_user_can_edit?(@new_subscription) %>
-        <% elsif user_signed_in? %>
-        <h4> <%= t("subscribers.i_will_go") %> </h4>
-          <div class="actions">
-            <%= f.submit t("subscribers.subscribe"), class: 'btn btn-primary buffer-top' %>
-          </div>
-        <% else %>
-          <h4> <%= t("subscribers.i_will_go") %> </h4>
-          <div class="form-group buffer-both">
-            <%= f.label :user_name %>
-            <%= f.text_field :user_name, class: 'form-control' %>
-          </div>
-
-          <div class="form-group">
-            <%= f.label :user_email %>
-            <%= f.text_field :user_email, class: 'form-control' %>
-          </div>
-
-          <div class="actions">
-            <%= f.submit t("subscribers.subscribe"), class: 'btn btn-primary buffer-top' %>
-          </div>
-      <% end %>
-  <% end %>
-</div>
-
-<div class="event-photos-gallery">
-  <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
-</div>
-
-
-<div class="event-photo-form">
-  <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
-</div>
+    <div class="event-subscription-form">
+      <div>
+        <% unless current_user_can_edit?(@event) %>
+          <%= render partial: 'subscriptions/form', locals: { subscription: @new_subscription || @event.subscriptions.build } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
 <div class="row">
   <div class="col-md-8">
