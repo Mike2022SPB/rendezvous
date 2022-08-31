@@ -5,6 +5,8 @@ class Comment < ApplicationRecord
   validates  :event, presence: true
   validates :body, presence: true
 
+  #has_many_attached :images
+
   validates :user_name, presence: true, unless: -> { user.present? }
 
   def user_name

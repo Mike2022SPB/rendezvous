@@ -55,14 +55,14 @@
     </div>
   </div>
 
-<div class="row">
-  <div class="col-md-8">
-    <div class="event-comments buffer-top">
-      <%= render partial: 'comments/form',
-        locals: {comment: @new_comment || @event.comments.build} %>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="event-comments buffer-top">
+        <%= render partial: 'comments/form',
+          locals: {comment: @new_comment || @event.comments.build} %>
+        </div>
       </div>
     </div>
-  </div>
 </div>
 
 <div class="row">

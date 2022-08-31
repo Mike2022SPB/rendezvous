@@ -1,5 +1,5 @@
 <div class="buffer-both">
-  <p><%= comment.body %></p>
+    <p><%= comment.body %></p>
   <p>
     <span>
       <% if comment.user.present? %>
@@ -11,6 +11,7 @@
         <%= button_to t("users.show.destroy"),  event_comment_path(comment.event, comment), method: :delete, form: { data: { 'turbo-confirm': t('controllers.events.are_you_really_sure') } }, class: 'btn btn-danger buffer-bottom' %>
       <% end %>
     </span>
+
   </p>
 </div>
 
