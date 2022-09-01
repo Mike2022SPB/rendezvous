@@ -1,11 +1,7 @@
 module ApplicationHelper
 
   def user_avatar(user)
-    if user.avatar?
-      user.avatar.url
-    else
-      asset_path('user.png')
-    end
+    asset_path('user.png')
   end
 
   def event_photo(event)
