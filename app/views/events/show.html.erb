@@ -30,6 +30,13 @@
     </div>
   </div>
 
+  <div class="event-subscriptions">
+    <h4> <%= "You can add images:" %> </h4>
+    <div>
+      <%= render partial: 'images/form', locals: { image: @new_image || @event.images.build } %>
+    </div>
+  </div>
+
   <div class="col-md-4">
     <div class="event-owner">
       <h4> <%= t("subscribers.invites") %> </h4>
@@ -74,4 +81,8 @@
       </div>
     </div>
   </div>
+</div>
+
+<div>
+  <%= render partial: 'images/image', collection: @event.images.except(@new_image) %>
 </div>
