@@ -1,12 +1,9 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  #before_action do
-    #ActiveStorage::Current.url_options = { protocol: request.protocol, host: request.host, port: request.port }
-  #end
 
   helper_method :current_user_can_edit?
 
-  around_action :switch_locale
+  before_action :switch_locale
 
   def current_user_can_edit?(model)
     user_signed_in? && (
@@ -22,8 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def switch_locale(&action)
-    locale = params[:locale] || I18n.default_locale
-    I18n.with_locale locale, &action
+    I18n.locale = locale_from_url || I18n.default_locale
   end
 
   def locale_from_url
@@ -35,6 +31,4 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { locale: I18n.locale }
   end
-
-
 end
