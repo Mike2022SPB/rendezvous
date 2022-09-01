@@ -10,4 +10,8 @@ class Event < ApplicationRecord
   has_many :subscriptions, dependent: :destroy
   has_many :subscribers, through: :subscriptions, source: :user
 
+
+  def pincode_valid?(pin2check)
+    pincode == pin2check
+  end
 end
