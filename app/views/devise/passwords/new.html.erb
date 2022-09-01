@@ -2,9 +2,7 @@
   <h2> <%= t("users.show.forgot_pass")%> </h2>
 </div>
 
-<form>
-
-  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, data: {turbo: false}) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="form-group buffer-both">
@@ -16,7 +14,5 @@
       <%= f.submit t("users.show.send_pass"), class: "btn btn-success" %>
     </div>
   <% end %>
-
-</form>
 
 <%= render "devise/shared/links" %>
