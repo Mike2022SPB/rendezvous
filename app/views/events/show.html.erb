@@ -30,6 +30,10 @@
     </div>
   </div>
 
+  <div class="event-photo-form">
+    <%= render partial: 'images/image', collection: @event.images.except(@new_image) %>
+  </div>
+
   <div class="event-subscriptions">
     <h4> <%= "You can add images:" %> </h4>
     <div>
@@ -81,8 +85,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div>
-  <%= render partial: 'images/image', collection: @event.images.except(@new_image) %>
 </div>

@@ -22,6 +22,7 @@ gem "image_processing"
 gem "aws-sdk-s3"
 gem "mailjet"
 gem "dotenv-rails"
+gem "lightbox2-rails"
 
 group :production do
   gem "pg"
