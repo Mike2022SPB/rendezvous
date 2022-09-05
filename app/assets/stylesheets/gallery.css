@@ -1,0 +1,15 @@
+.box-small {
+  float: left;
+  width: 20%;
+  display: block;
+  box-sizing: border-box;
+  margin: 2%
+}
+
+.box-destroy {
+  position: absolute;
+  float: left;
+  width: 10%;
+  margin-left: 20%;
+  padding-top: -2%;
+}
