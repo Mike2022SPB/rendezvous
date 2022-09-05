@@ -30,8 +30,10 @@
     </div>
   </div>
 
-  <div class="event-photos-gallery d-flex flex-wrap">
-    <%= render partial: 'images/image', collection: @event.images.except(@new_image) %>
+  <div class="row">
+    <div class="column" data-lightbox="images">
+      <%= render partial: 'images/image', collection: @event.images.except(@new_image) %>
+    </div>
   </div>
 
   <div class="event-subscriptions">
