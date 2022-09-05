@@ -4,10 +4,10 @@ document.addEventListener('turbo:load', () => {
     lightbox.init()
 
     lightbox.option({
-        'resizeDuration': 200,
+        'resizeDuration': 100,
         'wrapAround': true,
-        'fadeDuration': 200,
-        'imageFadeDuration': 200,
+        'fadeDuration': 100,
+        'imageFadeDuration': 100,
         'fitImagesInViewport': true
     })
 })
