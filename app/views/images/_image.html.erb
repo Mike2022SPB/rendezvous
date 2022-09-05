@@ -1,5 +1,4 @@
-<div class="event-photo mb-3 me-2">
+<div class="box-small">
   <% image_info = "#{render partial: 'images/image_info', locals: { image: image }}" %>
-  <%= link_to image_tag(image.image.url), image.image.url,
-              data: { lightbox: 'image', title: image_info} %>
+  <%= link_to image_tag(image.image.url, size: "150x125"), image.image.url, data: { lightbox: 'image', title: image_info} %>
 </div>
