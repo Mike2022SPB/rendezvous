@@ -39,4 +39,12 @@ class ImagesController < ApplicationController
   def image_params
     params.require(:image).permit(:image)
   end
+
+  def notify_images(event, image)
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
+
+    all_emails.each do |mail|
+      EventMailer.image(event, image, mail).deliver_now
+    end
+  end
 end
