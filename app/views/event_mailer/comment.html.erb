@@ -1,14 +1,14 @@
-<h1><%= I18n.t('subscriptions.subscription.event_mailer.comment.title') %></h1>
+<h1><%= t '.title' %></h1>
 <p><%= @comment.body %></p>
-<p><%= I18n.t('subscriptions.subscription.event_mailer.comment.author') %>: <strong><%= @comment.user_name %></strong></p>
+<p><%= t '.author' %>: <strong><%= @comment.user_name %></strong></p>
 
 <hr/>
 
-<%= I18n.t('subscriptions.subscription.event_mailer.comment.event') %>
-<h3><%= @event.title %></h3>
+<%= t '.event' %>
+<h3><%= link_to @comment.event.title, event_url(@comment.event) %></h3>
 
-<%= I18n.t('subscriptions.subscription.event_mailer.comment.datetime') %>
+<%= t '.datetime' %>
 <h4><%= l @event.datetime %></h4>
 
-<%= I18n.t('subscriptions.subscription.event_mailer.comment.owner') %>
+<%= t '.owner' %>
 <h4><%= @event.user.name %></h4>

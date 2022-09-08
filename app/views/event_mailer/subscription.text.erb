@@ -1,11 +1,11 @@
 New subscription
 ----
 
-<%= t('.name') %>: <%= @name %>
-<%= t('.email') %>: <%= @email %>
+Name: <%= @name %>
+Email: <%=  @email %>
 
 ----------------------
 
-<%= t('.event') %>: <%= @event.title %>
-<%= t('.datetime') %>: <%= l @event.datetime %>
-<%= t('.owner') %>: <%= @event.user.name %>
+Event: <%= @event.title %>
+Date: <%= l @event.datetime %>
+Organized by: <%= @event.user.name %>
