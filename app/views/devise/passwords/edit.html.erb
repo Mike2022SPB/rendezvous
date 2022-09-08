@@ -14,12 +14,12 @@
       <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> <%= t("password.min") %>)</em><br />
       <% end %>
-      <%= f.password_field :password, autofocus: true %>, class: "form-control" %>
+      <%= f.password_field :password, autofocus: true, class: "form-control" %>
     </div>
 
     <div class="form-group buffer-both">
       <%= f.label t("users.show.confirm_pass"), t("users.show.confirm_pass") %><br />
-      <%= f.password_field :password_confirmation class: "form-control" %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
     </div>
 
     <div class="actions">
