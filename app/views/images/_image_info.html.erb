@@ -2,7 +2,7 @@
 
 <%= render partial: 'users/image_user', locals: {user: image.user} %>
 
-<% if current_user_can_edit?(user) %>
+<% if current_user_can_edit?(image.event) %>
   <%= button_to 'Delete',
               event_image_path(image.event, image),
               form: { data: { turbo_confirm: "Are you sure?" } },
