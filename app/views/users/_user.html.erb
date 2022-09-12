@@ -1,12 +1,19 @@
-<span class="user">
-  <span class="user-avatar">
-    <%= image_tag(user_avatar(user), size: "40x40", class: 'img_icon') %>
-  </span>
-  <span class="user-name">
-    <% if request.path == user_path(user) %>
-    <%= user.name %>
-      <% else %>
-    <%= link_to user.name, user_path(user) %>
-      <% end %>
-  </span>
-</span>
+<div class="text-center">
+
+  <%= image_tag(user_avatar(@user)) %>
+
+  <h1><%= user.name %></h1>
+
+  <% if user == current_user %>
+
+    <p class="buffer-top">
+
+    <%= button_to t("users.show.editing"), edit_user_path(@user),
+    class: 'btn btn-success' %>
+    <%= button_to t("users.show.destroy"), @user, method: :delete, class: 'btn btn-danger buffer-top'%>
+
+    </p>
+  <% else %>
+  <% end %>
+
+</div>
