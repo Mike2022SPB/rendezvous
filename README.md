@@ -5,7 +5,7 @@ Rendezvous is a multilingual application for organizing meetings, walks and othe
 
 ### To use on your local machine:
 #### To clone the project:
-<code>git clone git@github.com:Mike2022SPB/rendezvous.git</code>
+<code>git clone git<span></span>@github.com:Mike2022SPB/rendezvous.git</code>
 #### To run on your local machine
 1. <code>cd rendezvous</code>
 2. <code>bundle</code>
