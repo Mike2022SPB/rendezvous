@@ -36,12 +36,14 @@
     </div>
   </div>
 
-  <div class="event-subscriptions">
-    <h4> <%= "You can add images:" %> </h4>
-    <div>
-      <%= render partial: 'images/form', locals: { image: @new_image || @event.images.build } %>
+  <% if user_signed_in? %>
+    <div class="event-subscriptions">
+      <h4> <%= "You can add images:" %> </h4>
+      <div>
+        <%= render partial: 'images/form', locals: { image: @new_image || @event.images.build } %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <div class="col-md-4">
     <div class="event-owner">

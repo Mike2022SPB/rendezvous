@@ -2,12 +2,13 @@
 
 <%= render partial: 'users/image_user', locals: {user: image.user} %>
 
-<%= button_to 'Delete',
+<% if current_user_can_edit?(user) %>
+  <%= button_to 'Delete',
               event_image_path(image.event, image),
               form: { data: { turbo_confirm: "Are you sure?" } },
               method: :delete,
               class: 'btn btn-danger buffer-top' %>
-
+<% end %>
 </span>
 
 
