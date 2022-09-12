@@ -8,6 +8,7 @@ class ImagesController < ApplicationController
     @new_image.user = current_user
 
     if @new_image.save
+      notify_subscribers(@event, @new_image)
       redirect_to @event, notice: t('controllers.created')
     else
       render 'events/show', alert: t('controllers.error')
@@ -40,11 +41,11 @@ class ImagesController < ApplicationController
     params.require(:image).permit(:image)
   end
 
-  def notify_images(event, image)
-    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
+  def notify_subscribers(event, image)
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [image.user&.email]).uniq
 
-    all_emails.each do |mail|
-      EventMailer.image(event, image, mail).deliver_now
+    all_emails.each do |email|
+      EventMailer.image(image, email).deliver_now
     end
   end
 end

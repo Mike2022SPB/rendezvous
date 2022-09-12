@@ -1,11 +1,8 @@
 <h1><%= t '.title' %></h1>
 
 <p><%= t '.author' %>: <strong><%= @image.user.name %></strong></p>
-<%= image_tag(@image.attached_image.variant(:thumb), class: 'img-fluid') %>
+<%= link_to image_tag(@image.image.url, size: "750x500"), @image.image.url %>
 <hr/>
-
-<%= t '.event' %>
-<h3><%= link_to @event.title, event_url(@event) %></h3>
 
 <%= t '.datetime' %>
 <h4><%= l @event.datetime %></h4>
