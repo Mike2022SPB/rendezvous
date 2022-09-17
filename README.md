@@ -5,12 +5,31 @@ Rendezvous is a multilingual application for organizing meetings, walks and othe
 
 ### To use on your local machine:
 #### To clone the project:
-<code>git clone git<span></span>@github.com:Mike2022SPB/rendezvous.git</code>
+
+```
+git clone git<span></span>@github.com:Mike2022SPB/rendezvous.git
+```
+
 #### To run on your local machine
-1. <code>cd rendezvous</code>
-2. <code>bundle</code>
-3. <code>rails db:migrate</code>
-4. <code>rails s</code>
+
+```
+cd rendezvous
+```
+
+```
+bundle
+```
+
+```
+rails db:migrate
+```
+
+```
+rails s
+```
+
+#### Rename .env.examples to .env and add environment variables.
+
 
 Technologies:
 1. Ruby on Rails
